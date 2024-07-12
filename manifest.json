@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "X Ad Remover",
+  "version": "0.4",
+  "description": "X.com Ads Remover",
+  "permissions": ["scripting", "tabs"],
+  "host_permissions": ["https://x.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
